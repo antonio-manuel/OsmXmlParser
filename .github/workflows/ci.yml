@@ -1,0 +1,22 @@
+# ci.yml
+---
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  ci-pipeline:
+    runs-on: "self-hosted"
+
+    steps:
+      - name: Checkout source code from Github
+        uses: actions/checkout@v3
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v
+
+      - name: Run build with Gradle Wrapper
+        run: ./gradlew build
