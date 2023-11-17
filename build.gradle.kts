@@ -7,7 +7,7 @@ object Versions {
 plugins {
     kotlin("jvm") version "1.9.10"
     id("org.ajoberstar.grgit") version "5.2.0"
-    id("com.github.ben-manes.versions") version "0.47.0"
+    id("com.github.ben-manes.versions") version "0.50.0"
 }
 
 group = "eu.antoniolopez.xmlparser"
